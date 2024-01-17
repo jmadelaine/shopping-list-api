@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List API Documentation</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        color: #6a788a;
+        font-family: sans-serif;
+        background-color: #1b1f24;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 2rem;
+        gap: 2rem;
+        padding-bottom: 16rem;
+      }
+
+      .endpoint-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
+      }
+
+      pre {
+        color: #dea200;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: #161a1d;
+        margin-left: -1rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #afbac6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shopping List API Documentation</h1>
+    <p>This API allows you to manage a shopping list with basic CRUD operations.</p>
+
+    <p>The database is reset when the server shuts down.</p>
+    <p>Happy coding. 🤓</p>
+
+    <h2>Endpoints</h2>
+
+    <div class="endpoint-container">
+      <h3>Read All Items</h3>
+      <pre>GET /shoppingListItems</pre>
+      <p>Returns all items in the shopping list.</p>
+    </div>
+
+    <div class="endpoint-container">
+      <h3>Delete All Items</h3>
+      <pre>DELETE /shoppingListItems</pre>
+      <p>Deletes all items from the shopping list.</p>
+    </div>
+
+    <div class="endpoint-container">
+      <h3>Create Item</h3>
+      <pre>POST /shoppingListItem</pre>
+      <p>Creates a new item in the shopping list. Requires a JSON body with 'name' (string) and 'count' (number).</p>
+    </div>
+
+    <div class="endpoint-container">
+      <h3>Read Item</h3>
+      <pre>GET /shoppingListItem/:id</pre>
+      <p>Returns the item with the specified ID.</p>
+    </div>
+
+    <div class="endpoint-container">
+      <h3>Update Item</h3>
+      <pre>PUT /shoppingListItem/:id</pre>
+      <p>
+        Updates the item with the specified ID. Accepts a partial JSON body with 'name' (string) and/or 'count'
+        (number).
+      </p>
+    </div>
+
+    <div class="endpoint-container">
+      <h3>Delete Item</h3>
+      <pre>DELETE /shoppingListItem/:id</pre>
+      <p>Deletes the item with the specified ID.</p>
+    </div>
+  </body>
+</html>
